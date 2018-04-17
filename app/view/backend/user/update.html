@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="TQBlog V2.0 Release 20140101" />
+<meta name="robots" content="none" />
+<title>www.tqblog.com - 用户添加 - Powered by TQBlog</title>
+<link href="web/<?= PLATFORM ?>/css/admin.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="web/<?= PLATFORM ?>/css/jquery.bettertip.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="web/<?= PLATFORM ?>/css/jquery-ui.custom.css"/>
+<script src="web/<?= PLATFORM ?>/script/common.js" type="text/javascript"></script>
+<script src="web/<?= PLATFORM ?>/script/jquery.bettertip.pack.js" type="text/javascript"></script>
+<script src="web/<?= PLATFORM ?>/script/jquery-ui.custom.min.js" type="text/javascript"></script>
+</head>
+<body>
+<section class="main">
+<div id="divMain">
+  <div class="divHeader2">用户添加</div>
+  <div class="SubMenu"></div>
+  <div id="divMain2" class="edit category_edit">
+	<form id="edit" name="edit" method="post" action="?p=backend&c=User&a=update&id=<?= $user->id ?>">
+	  <p>
+		<span class="title">用户名:</span><span class="star">(*)</span><br />
+		<input id="edtName" class="edit" size="40" name="Username" maxlength="50" type="text" value="<?= $user->name ?>" />
+		<br />
+		<span class="title">昵称:</span><span class="star">(*)</span><br />
+		<input id="edtNickname" class="edit" size="40" name="Nickname" maxlength="50" type="text" value="<?= $user->nickname ?>" />
+		  <br />
+		  <span class="title">邮箱:</span><span class="star">(*)</span><br />
+		  <input id="edtEmail" class="edit" size="200" name="Email" maxlength="200" type="text" value='<?= $user->email ?>' />
+
+		  <br />
+		  <span class="title">手机号:</span><span class="star">(*)</span><br />
+		  <input id="edtMobileNumber" class="edit" size="40" name="MobileNumber" maxlength="11" type="number" value="<?= $user->mobile_number ?>" />
+	  </p>
+	 
+    <!-- 1号输出接口 -->
+       <div id='response' class='editmod'>
+	   </div>
+	  <p>
+		<input type="submit" class="button" value="提交" id="btnPost" onclick="return checkInfo();" />
+	  </p>
+	</form>
+  </div>
+</div>
+
+
+</section></body>
+</html><!--101.304ms-->
